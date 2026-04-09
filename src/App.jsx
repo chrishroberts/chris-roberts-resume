@@ -504,7 +504,7 @@ export default function ChrisRobertsSamsaraResume() {
 
               <div className="cr-section-label" style={{marginTop:"8px"}}>Contact</div>
               <div className="cr-prose" style={{marginBottom: 0}}>
-                905-580-9430 · chris.h.roberts@outlook.com · Hamilton, Ontario
+                905-580-9430 · chris.h.roberts@outlook.com · Greater Toronto & Hamilton Area
               </div>
             </div>
           )}
