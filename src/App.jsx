@@ -501,15 +501,7 @@ export default function ChrisRobertsSamsaraResume() {
                 They are organisations where I have established C-suite trust, multi-year procurement history, and existing
                 champions who can accelerate a Samsara conversation from day one.
               </p>
-              <div className="cr-link-banner">
-                <span style={{fontSize:"20px"}}>📄</span>
-                <div>
-                  <div className="cr-link-label">Full résumé with career attainment record</div>
-                  <a href="https://linkedin.com/in/chrishroberts" target="_blank" rel="noopener noreferrer">
-                    linkedin.com/in/chrishroberts →
-                  </a>
-                </div>
-              </div>
+
               <div className="cr-section-label" style={{marginTop:"8px"}}>Contact</div>
               <div className="cr-prose" style={{marginBottom: 0}}>
                 905-580-9430 · chris.h.roberts@outlook.com · Hamilton, Ontario
