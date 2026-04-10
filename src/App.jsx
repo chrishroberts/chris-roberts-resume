@@ -256,7 +256,7 @@ const css = `
   .cr-job-summary { font-size: 12.5px; color: #8A94A6; margin-bottom: 10px; line-height: 1.65; }
   .cr-job-bullets { list-style: none; }
   .cr-job-bullets li { font-size: 12.5px; color: #9AA3B2; padding: 3px 0 3px 14px; position: relative; line-height: 1.6; }
-  .cr-job-bullets li::before { content: "\25b8"; position: absolute; left: 0; color: #C49A3C; font-size: 9px; top: 5px; }
+  .cr-job-bullets li::before { content: "▸"; position: absolute; left: 0; color: #C49A3C; font-size: 9px; top: 5px; }
   .cr-case { background: #161F30; border: 1px solid #1E2D45; border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .cr-case-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
   .cr-case-logo { font-size: 22px; }
@@ -275,7 +275,7 @@ const css = `
   .cr-sub-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #C49A3C; margin-bottom: 10px; margin-top: 22px; }
   .cr-canada-list { list-style: none; margin-bottom: 20px; }
   .cr-canada-list li { font-size: 12.5px; color: #8A94A6; padding: 7px 0 7px 18px; border-bottom: 1px solid #1E2D45; position: relative; line-height: 1.6; }
-  .cr-canada-list li::before { content: "\2192"; position: absolute; left: 0; color: #C49A3C; }
+  .cr-canada-list li::before { content: "→"; position: absolute; left: 0; color: #C49A3C; }
   .cr-comp-row { display: flex; gap: 14px; margin-bottom: 8px; align-items: flex-start; }
   .cr-comp-name { font-size: 12px; font-weight: 500; color: #FFFFFF; width: 140px; flex-shrink: 0; }
   .cr-comp-weakness { font-size: 12px; color: #8A94A6; line-height: 1.55; }
