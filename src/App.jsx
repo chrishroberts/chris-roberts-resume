@@ -224,7 +224,81 @@ const LEADERSHIP = [
   },
 ];
 
-const css = ;
+const css = `
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .cr-root { background: #0B1628; color: #F5F0E8; font-family: 'DM Sans', sans-serif; min-height: 100vh; font-size: 14px; line-height: 1.6; }
+  .cr-hero { position: relative; padding: 40px 40px 36px; background: linear-gradient(160deg, #0f1e38 0%, #0B1628 60%); border-bottom: 1px solid #1E2D45; display: flex; gap: 32px; align-items: center; }
+  .cr-hero-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, #C49A3C, transparent); }
+  .cr-headshot { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid #C49A3C; flex-shrink: 0; }
+  .cr-hero-text { flex: 1; }
+  .cr-hero-eyebrow { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C49A3C; font-weight: 500; margin-bottom: 6px; }
+  .cr-hero-name { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #FFFFFF; line-height: 1.1; margin-bottom: 4px; }
+  .cr-hero-role { font-size: 12px; color: #8A94A6; font-weight: 300; margin-bottom: 20px; }
+  .cr-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .cr-stat { background: rgba(196,154,60,0.07); border: 1px solid rgba(196,154,60,0.2); border-radius: 6px; padding: 10px 8px; text-align: center; }
+  .cr-stat-value { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #C49A3C; line-height: 1; margin-bottom: 3px; }
+  .cr-stat-label { font-size: 8px; text-transform: uppercase; letter-spacing: 0.08em; color: #8A94A6; }
+  .cr-nav { background: #111827; border-bottom: 1px solid #1E2D45; padding: 0 40px; display: flex; gap: 4px; overflow-x: auto; }
+  .cr-nav-tab { background: none; border: none; color: #8A94A6; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 14px; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; }
+  .cr-nav-tab:hover { color: #F5F0E8; }
+  .cr-nav-tab.active { color: #C49A3C; border-bottom-color: #C49A3C; }
+  .cr-body { padding: 28px 40px; max-width: 900px; }
+  .cr-section-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #C49A3C; margin-bottom: 8px; }
+  .cr-section-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #FFFFFF; line-height: 1.2; margin-bottom: 14px; }
+  .cr-prose { color: #8A94A6; font-size: 13px; line-height: 1.75; max-width: 680px; margin-bottom: 28px; }
+  .cr-job { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #1E2D45; }
+  .cr-job:last-child { border-bottom: none; }
+  .cr-job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3px; }
+  .cr-job-title { font-size: 14px; font-weight: 500; color: #FFFFFF; }
+  .cr-job-dates { font-size: 11px; color: #8A94A6; margin-top: 2px; }
+  .cr-job-company { font-size: 10px; color: #C49A3C; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+  .cr-job-summary { font-size: 12.5px; color: #8A94A6; margin-bottom: 10px; line-height: 1.65; }
+  .cr-job-bullets { list-style: none; }
+  .cr-job-bullets li { font-size: 12.5px; color: #9AA3B2; padding: 3px 0 3px 14px; position: relative; line-height: 1.6; }
+  .cr-job-bullets li::before { content: "\25b8"; position: absolute; left: 0; color: #C49A3C; font-size: 9px; top: 5px; }
+  .cr-case { background: #161F30; border: 1px solid #1E2D45; border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .cr-case-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .cr-case-logo { font-size: 22px; }
+  .cr-case-name { font-size: 15px; font-weight: 500; color: #FFFFFF; }
+  .cr-case-tag { font-size: 9px; color: #C49A3C; letter-spacing: 0.1em; text-transform: uppercase; }
+  .cr-case-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .cr-case-col-label { font-size: 9px; color: #C49A3C; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 5px; }
+  .cr-case-col-text { font-size: 12px; color: #8A94A6; line-height: 1.65; }
+  .cr-case-relevance { background: rgba(196,154,60,0.06); border-left: 2px solid #C49A3C; padding: 9px 12px; border-radius: 0 4px 4px 0; font-size: 11.5px; color: #A8B4C8; line-height: 1.6; }
+  .cr-case-relevance strong { color: #C49A3C; font-weight: 500; }
+  .cr-intel-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 28px; }
+  .cr-intel-stat { background: #161F30; border: 1px solid #1E2D45; border-radius: 6px; padding: 14px; text-align: center; }
+  .cr-intel-stat-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #C49A3C; margin-bottom: 2px; }
+  .cr-intel-stat-label { font-size: 9px; color: #8A94A6; text-transform: uppercase; letter-spacing: 0.08em; }
+  .cr-intel-stat-note { font-size: 9px; color: #4CAF8A; margin-top: 2px; }
+  .cr-sub-label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #C49A3C; margin-bottom: 10px; margin-top: 22px; }
+  .cr-canada-list { list-style: none; margin-bottom: 20px; }
+  .cr-canada-list li { font-size: 12.5px; color: #8A94A6; padding: 7px 0 7px 18px; border-bottom: 1px solid #1E2D45; position: relative; line-height: 1.6; }
+  .cr-canada-list li::before { content: "\2192"; position: absolute; left: 0; color: #C49A3C; }
+  .cr-comp-row { display: flex; gap: 14px; margin-bottom: 8px; align-items: flex-start; }
+  .cr-comp-name { font-size: 12px; font-weight: 500; color: #FFFFFF; width: 140px; flex-shrink: 0; }
+  .cr-comp-weakness { font-size: 12px; color: #8A94A6; line-height: 1.55; }
+  .cr-account-row { display: flex; gap: 14px; margin-bottom: 8px; padding: 10px; background: #161F30; border-radius: 6px; border: 1px solid #1E2D45; align-items: flex-start; }
+  .cr-account-name { font-size: 12.5px; font-weight: 500; color: #FFFFFF; width: 170px; flex-shrink: 0; }
+  .cr-account-badge { font-size: 9px; padding: 2px 7px; border-radius: 20px; background: rgba(196,154,60,0.12); color: #C49A3C; border: 1px solid rgba(196,154,60,0.25); white-space: nowrap; }
+  .cr-account-note { font-size: 11.5px; color: #8A94A6; line-height: 1.55; }
+  .cr-card { background: #161F30; border: 1px solid #1E2D45; border-radius: 8px; padding: 18px; margin-bottom: 14px; display: flex; gap: 14px; }
+  .cr-card-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .cr-card-title { font-size: 13.5px; font-weight: 500; color: #FFFFFF; margin-bottom: 2px; }
+  .cr-card-org { font-size: 9px; color: #C49A3C; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .cr-card-body { font-size: 12px; color: #8A94A6; line-height: 1.7; }
+  .cr-gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+  .cr-gallery-item { border-radius: 8px; overflow: hidden; border: 1px solid #1E2D45; }
+  .cr-gallery-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+  @media (max-width: 640px) {
+    .cr-hero { flex-direction: column; padding: 28px 20px 24px; gap: 16px; }
+    .cr-stats { grid-template-columns: repeat(3,1fr); }
+    .cr-body { padding: 20px; }
+    .cr-case-grid { grid-template-columns: 1fr; }
+    .cr-intel-grid { grid-template-columns: repeat(2,1fr); }
+  }
+`;
 
 export default function ChrisRobertsSamsaraResume() {
   const [activeTab, setActiveTab] = useState("Overview");
